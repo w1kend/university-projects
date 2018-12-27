@@ -47,7 +47,7 @@ int main()
 
 			c[i][j] = 0;
 			for (int k = 0; k < n; ++k)
-				c[i][j] = a[i][k] * b[k][j];
+				c[i][j] += a[i][k] * b[k][j];
 
 		}
 	printf("\nBasic algorithm: %f", (clock() - stime) / 1000.0);
@@ -63,7 +63,7 @@ int main()
 
 			c[i][j] = 0;
 			for (int k = 0; k < n; ++k)
-				c[i][j] = a[i][k] * b[k][j];
+				c[i][j] += a[i][k] * b[k][j];
 
 		}
 	printf("\nBasic algorithm (Parallel): %f", (clock() - stime) / 1000.0);
@@ -78,7 +78,7 @@ int main()
 			c[i][j] = 0;
 
 			for (int k = 0; k < n; ++k)
-				c[i][j] = a[i][k] * b[j][k];
+				c[i][j] += a[i][k] * b[j][k];
 
 		}
 
@@ -96,7 +96,7 @@ int main()
 			c[i][j] = 0;
 
 			for (int k = 0; k < n; ++k)
-				c[i][j] = a[i][k] * b[j][k];
+				c[i][j] += a[i][k] * b[j][k];
 
 		}
 
